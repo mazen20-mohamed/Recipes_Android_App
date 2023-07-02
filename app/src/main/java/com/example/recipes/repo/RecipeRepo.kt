@@ -1,6 +1,7 @@
 package com.example.recipes.repo
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import com.example.recipes.database.recipeDatabase.RecipeDatabase
 import com.example.recipes.model.Recipe
 import kotlinx.coroutines.CoroutineScope
@@ -23,6 +24,10 @@ class RecipeRepo {
             }
         }
 
+        fun getRecipes(context: Context): LiveData<List<Recipe>>? {
+            recipeDatabase = initialiseDB(context)
+            return recipeDatabase?.RecipeDao()?.getRecipes()
+        }
 
     }
 }

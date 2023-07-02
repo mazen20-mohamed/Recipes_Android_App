@@ -3,4 +3,10 @@
     <string name="Email">Email</string>
     <string name="Password">password</string>
     <string name="login">Login</string>
+    <string name="titleScreen">Food for \n Everyone</string>
+    <string name="get_Started">Get Started</string>
+    <string name="welcome">Welcome \n Back</string>
+    <string name="time">120 min</string>
+    <string name="bacck">back</string>
+    <string name="ingredient">Ingredients:</string>
 </resources>

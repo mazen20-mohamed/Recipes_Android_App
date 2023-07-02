@@ -11,14 +11,37 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
-        android:background="@color/yellow"
+        android:background="@color/white_gray"
         tools:context=".ui.listRecipe.MainScreen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Delicious\n food for you"
+                android:textColor="@color/redd"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/boy" />
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_recipe"
-            android:layout_weight="10"
-            android:layout_marginTop="40dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             tools:listitem="@layout/recipe_card"
             android:layout_gravity="start" />

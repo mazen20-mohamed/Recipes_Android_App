@@ -24,7 +24,7 @@ abstract class UserDatabase: RoomDatabase() {
                     if(instance == null)
                     {
                         instance = Room.databaseBuilder(context, UserDatabase::class.java,
-                            "user1.db").build()
+                            "user14.db").allowMainThreadQueries().build()
                     }
                 }
             }

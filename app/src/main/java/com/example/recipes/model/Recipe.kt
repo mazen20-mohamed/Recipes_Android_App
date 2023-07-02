@@ -2,14 +2,15 @@ package com.example.recipes.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 @Entity
 data class Recipe (
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo("database_id") val databaseId:Int,
-    @SerializedName("id"                        ) var id                       : String?           = null,
+    @PrimaryKey
+    @SerializedName("id"                        ) var id                       : String,
     @SerializedName("fats"                      ) var fats                     : String?           = null,
     @SerializedName("name"                      ) var name                     : String?           = null,
     @SerializedName("time"                      ) var time                     : String?           = null,
@@ -33,5 +34,4 @@ data class Recipe (
     @SerializedName("incompatibilities"         ) var incompatibilities        : String?           = null,
     @SerializedName("deliverable_ingredients"   ) var deliverableIngredients   : List<String> = listOf(),
     @SerializedName("undeliverable_ingredients" ) var undeliverableIngredients : List<String> = listOf()
-
-)
+):Serializable

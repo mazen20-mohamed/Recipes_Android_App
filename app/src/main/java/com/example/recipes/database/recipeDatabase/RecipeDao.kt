@@ -12,9 +12,9 @@ interface RecipeDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRecipe(recipe: Recipe)
 
-    @Query("select * from Recipe")
+    @Query("select DISTINCT  * from Recipe")
     fun getRecipes():LiveData<List<Recipe>>
 
-    @Query("select * from Recipe where :id==id")
+    @Query("select DISTINCT * from Recipe where :id==id")
     fun getRecipe(id:String?):LiveData<Recipe>
 }
